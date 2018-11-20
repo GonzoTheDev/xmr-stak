@@ -793,9 +793,9 @@ int main(int argc, char *argv[])
 	printer::inst()->print_str("   __               _                           \n");
 	printer::inst()->print_str("  / _|             | |                          \n");
 	printer::inst()->print_str(" | |_ _ __ ___  ___| |__   __ ___   _____ _ __  \n");
-	printer::inst()->print_str(" |  _| '__/ _ \/ _ \ '_ \ / _` \ \ / / _ \ '_ \ \n");
-	printer::inst()->print_str(" | | | | |  __/  __/ | | | (_| |\ V /  __/ | | |\n");
-	printer::inst()->print_str(" |_| |_|  \___|\___|_| |_|\__,_| \_/ \___|_| |_| \n");	
+	printer::inst()->print_str(" |  _| '__/ _ \\/ _ \\ '_ \\ / _` \\ \\ / / _ \\ '_ \\ \n");
+	printer::inst()->print_str(" | | | | |  __/  __/ | | | (_| |\\ V /  __/ | | |\n");
+	printer::inst()->print_str(" |_| |_|  \\___|\\___|_| |_|\\__,_| \\_/ \\___|_| |_| \n");	
 	printer::inst()->print_str("Untraceable payments x Stable network x NO FEES x NO PREMINE\n");
 	printer::inst()->print_str("Check out our Discord https://discord.gg/cFR5mgg\n");
 	printer::inst()->print_str("-------------------------------------------------------------------\n");

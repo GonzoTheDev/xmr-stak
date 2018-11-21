@@ -25,8 +25,8 @@ For linux also the OpenSource driver ROCm 1.9.X+ is a well working alternative, 
 ### GNU Compiler
 ```
     # Ubuntu / Debian
-    sudo apt install libmicrohttpd-dev libssl-dev cmake build-essential libhwloc-dev
-    git clone https://github.com/fireice-uk/xmr-stak.git
+    sudo apt install libmicrohttpd-dev libssl-dev cmake build-essential libhwloc-dev git
+    git clone https://github.com/killmak/xmr-stak.git
     mkdir xmr-stak/build
     cd xmr-stak/build
     cmake ..

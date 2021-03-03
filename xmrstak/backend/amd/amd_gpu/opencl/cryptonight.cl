@@ -475,7 +475,7 @@ __kernel void JOIN(cn0,ALGO)(__global ulong *input, __global uint4 *Scratchpad, 
 
     mem_fence(CLK_LOCAL_MEM_FENCE);
         
-// cryptonight_heavy || cryptonight_haven || cryptonight_freehaven || cryptonight_bittube2
+// cryptonight_heavy || cryptonight_haven || cryptonight_cryptocoin || cryptonight_bittube2
 #if (ALGO == 4 || ALGO == 9 || ALGO == 10 || ALGO == 12)
     __local uint4 xin[8][8];
     {
@@ -774,7 +774,7 @@ __kernel void JOIN(cn1,ALGO) (__global uint4 *Scratchpad, __global ulong *states
                 long q = fast_div_heavy(n, d | 0x5);
 			*((__global long*)(Scratchpad + (IDX((idx0) >> 4)))) = n ^ q;
 			idx0 = (d ^ q) & MASK;
-// cryptonight_haven || cryptonight_freehaven
+// cryptonight_haven || cryptonight_cryptocoin
 #elif (ALGO == 9 || ALGO == 12)
 			long n = *((__global long*)(Scratchpad + (IDX((idx0) >> 4))));
 			int d = ((__global int*)(Scratchpad + (IDX((idx0) >> 4))))[2];
@@ -810,7 +810,7 @@ __kernel void JOIN(cn2,ALGO) (__global uint4 *Scratchpad, __global ulong *states
 
     barrier(CLK_LOCAL_MEM_FENCE);
 
-// cryptonight_heavy || cryptonight_haven || cryptonight_freehaven || cryptonight_bittube2
+// cryptonight_heavy || cryptonight_haven || cryptonight_cryptocoin || cryptonight_bittube2
 #if (ALGO == 4 || ALGO == 9 || ALGO == 10 || ALGO == 12)
     __local uint4 xin1[8][8];
     __local uint4 xin2[8][8];
@@ -847,7 +847,7 @@ __kernel void JOIN(cn2,ALGO) (__global uint4 *Scratchpad, __global ulong *states
 
     barrier(CLK_LOCAL_MEM_FENCE);
 
-// cryptonight_heavy || cryptonight_haven || cryptonight_freehaven || cryptonight_bittube2
+// cryptonight_heavy || cryptonight_haven || cryptonight_cryptocoin || cryptonight_bittube2
 #if (ALGO == 4 || ALGO == 9 || ALGO == 10 || ALGO == 12)
     __local uint4* xin1_store = &xin1[get_local_id(1)][get_local_id(0)];
     __local uint4* xin1_load = &xin1[(get_local_id(1) + 1) % 8][get_local_id(0)];
@@ -901,7 +901,7 @@ __kernel void JOIN(cn2,ALGO) (__global uint4 *Scratchpad, __global ulong *states
 #endif
     }
 
-// cryptonight_heavy || cryptonight_haven || cryptonight_freehaven || cryptonight_bittube2
+// cryptonight_heavy || cryptonight_haven || cryptonight_cryptocoin || cryptonight_bittube2
 #if (ALGO == 4 || ALGO == 9 || ALGO == 10 || ALGO == 12)
     /* Also left over threads performe this loop.
      * The left over thread results will be ignored

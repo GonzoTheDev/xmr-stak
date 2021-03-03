@@ -379,13 +379,13 @@ bool minethd::self_test()
 			hashf("This is a test This is a test This is a test", 44, out, ctx);
 			bResult = bResult &&  memcmp(out, "\xc7\xd4\x52\x9\x2b\x48\xa5\xaf\xae\x11\xaf\x40\x9a\x87\xe5\x88\xf0\x29\x35\xa3\x68\xd\xe3\x6b\xce\x43\xf6\xc8\xdf\xd3\xe3\x9", 32) == 0;
 		}
-		else if(algo == cryptonight_freehaven)
+		else if(algo == cryptonight_cryptocoin)
 		{
-			hashf = func_selector(::jconf::inst()->HaveHardwareAes(), false, xmrstak_algo::cryptonight_freehaven);
+			hashf = func_selector(::jconf::inst()->HaveHardwareAes(), false, xmrstak_algo::cryptonight_cryptocoin);
 			hashf("This is a test This is a test This is a test", 44, out, ctx);
 			bResult = bResult &&  memcmp(out, "\xc7\xd4\x52\x9\x2b\x48\xa5\xaf\xae\x11\xaf\x40\x9a\x87\xe5\x88\xf0\x29\x35\xa3\x68\xd\xe3\x6b\xce\x43\xf6\xc8\xdf\xd3\xe3\x9", 32) == 0;
 
-			hashf = func_selector(::jconf::inst()->HaveHardwareAes(), true, xmrstak_algo::cryptonight_freehaven);
+			hashf = func_selector(::jconf::inst()->HaveHardwareAes(), true, xmrstak_algo::cryptonight_cryptocoin);
 			hashf("This is a test This is a test This is a test", 44, out, ctx);
 			bResult = bResult &&  memcmp(out, "\xc7\xd4\x52\x9\x2b\x48\xa5\xaf\xae\x11\xaf\x40\x9a\x87\xe5\x88\xf0\x29\x35\xa3\x68\xd\xe3\x6b\xce\x43\xf6\xc8\xdf\xd3\xe3\x9", 32) == 0;
 		}
@@ -530,7 +530,7 @@ minethd::cn_hash_fun minethd::func_multi_selector(bool bHaveAes, bool bNoPrefetc
 	case cryptonight_monero_v8:
 		algv = 10;
 		break;
-	case cryptonight_freehaven:
+	case cryptonight_cryptocoin:
 		algv = 11;
 		break;
 	default:
@@ -594,10 +594,10 @@ minethd::cn_hash_fun minethd::func_multi_selector(bool bHaveAes, bool bNoPrefetc
 		Cryptonight_hash<N>::template hash<cryptonight_monero_v8, false, true>,
 		Cryptonight_hash<N>::template hash<cryptonight_monero_v8, true, true>,
 
-		Cryptonight_hash<N>::template hash<cryptonight_freehaven, false, false>,
-		Cryptonight_hash<N>::template hash<cryptonight_freehaven, true, false>,
-		Cryptonight_hash<N>::template hash<cryptonight_freehaven, false, true>,
-		Cryptonight_hash<N>::template hash<cryptonight_freehaven, true, true>,
+		Cryptonight_hash<N>::template hash<cryptonight_cryptocoin, false, false>,
+		Cryptonight_hash<N>::template hash<cryptonight_cryptocoin, true, false>,
+		Cryptonight_hash<N>::template hash<cryptonight_cryptocoin, false, true>,
+		Cryptonight_hash<N>::template hash<cryptonight_cryptocoin, true, true>,
 	};
 
 	std::bitset<2> digit;

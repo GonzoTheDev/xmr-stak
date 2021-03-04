@@ -1,6 +1,7 @@
 # CryptoCoin xmr-stak Miner Usage
-
+```
 xmr-stak --currency cryptocoin -o mining.crypt-o-coin.cash:33055 -u WALLET  -p x
+```
 
 ###### fireice-uk's and psychocrypt's
 # XMR-Stak - Cryptonight All-in-One Mining Software

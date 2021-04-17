@@ -26,7 +26,7 @@ For linux also the OpenSource driver ROCm 1.9.X+ is a well working alternative, 
 ```
     # Ubuntu / Debian
     sudo apt install libmicrohttpd-dev libssl-dev cmake build-essential libhwloc-dev git
-    git clone https://github.com/killmak/xmr-stak.git
+    git clone https://github.com/GonzoTheDev/xmr-stak.git
     mkdir xmr-stak/build
     cd xmr-stak/build
     cmake ..
@@ -34,7 +34,7 @@ For linux also the OpenSource driver ROCm 1.9.X+ is a well working alternative, 
 
     # Arch
     sudo pacman -S --needed base-devel hwloc openssl cmake libmicrohttpd
-    git clone https://github.com/fireice-uk/xmr-stak.git
+    git clone https://github.com/GonzoTheDev/xmr-stak.git
     mkdir xmr-stak/build
     cd xmr-stak/build
     cmake ..
@@ -42,7 +42,7 @@ For linux also the OpenSource driver ROCm 1.9.X+ is a well working alternative, 
 
     # Fedora
     sudo dnf install gcc gcc-c++ hwloc-devel libmicrohttpd-devel libstdc++-static make openssl-devel cmake
-    git clone https://github.com/fireice-uk/xmr-stak.git
+    git clone https://github.com/GonzoTheDev/xmr-stak.git
     mkdir xmr-stak/build
     cd xmr-stak/build
     cmake ..
@@ -52,7 +52,7 @@ For linux also the OpenSource driver ROCm 1.9.X+ is a well working alternative, 
     sudo yum install centos-release-scl epel-release
     sudo yum install cmake3 devtoolset-4-gcc* hwloc-devel libmicrohttpd-devel openssl-devel make
     scl enable devtoolset-4 bash
-    git clone https://github.com/fireice-uk/xmr-stak.git
+    git clone https://github.com/GonzoTheDev/xmr-stak.git
     mkdir xmr-stak/build
     cd xmr-stak/build
     cmake3 ..
